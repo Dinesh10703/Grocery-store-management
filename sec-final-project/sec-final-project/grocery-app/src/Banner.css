@@ -1,0 +1,33 @@
+.banner {
+  margin-top: 15px;;
+  width: 100%;
+  overflow: hidden; /* Hides content outside the container */
+  position: relative;
+  box-shadow: 1px 1px 10px black;
+}
+
+.slider {
+  display: flex;
+  animation: slide 10s infinite; /* Infinite loop of 10 seconds */
+}
+
+.banner-image {
+  min-width: 100%; /* Ensures each image takes up 100% of the banner width */
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start with the first image */
+  }
+  33.33% {
+    transform: translateX(-100%); /* Slide to the second image */
+  }
+  66.66% {
+    transform: translateX(-200%); /* Slide to the third image */
+  }
+  100% {
+    transform: translateX(0); /* Return to the first image */
+  }
+}
